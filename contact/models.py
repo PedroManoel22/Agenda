@@ -1,9 +1,6 @@
 from django.db import models
 from django.utils import timezone
 
-# id (primary key)
-# first_name (str), last_name (str), phone (str)
-# email (email), created_date (date), description (text)
 # category (foreign key), show(boolean), owner (foreign key)
 # picture (imagem)
 
