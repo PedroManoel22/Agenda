@@ -7,11 +7,14 @@ from django.utils import timezone
 
 
 class Category(models.Model):
+    class Meta:
+        verbose_name = "Category"
+        verbose_name_plural = "Categories"
+
     name = models.CharField(max_length=50)
 
     def __str__(self) -> str:
         return self.name
-
 
 
 class Contact(models.Model):
@@ -26,6 +29,5 @@ class Contact(models.Model):
     category = models.ForeignKey(Category, 
                                  on_delete=models.SET_NULL,
                                  blank=True, null=True) # -> quando eu apagar uma category esse campo fique null
-
     def __str__(self) -> str:
         return f"{self.first_name} {self.last_name}"
