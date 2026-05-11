@@ -1,3 +1,6 @@
+# type: ignore
+# flake8: noqa
+
 """
 Django settings for project project.
 
@@ -52,7 +55,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'project.urls'
 
-TEMPLATES = [ # type: ignore
+TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [BASE_DIR / 'base_templates'],
