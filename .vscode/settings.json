@@ -41,7 +41,7 @@
     "editor.formatOnType": true
   },
   "ruff.nativeServer": true,
-  "python.defaultInterpreterPath": ".\\.venv\\Scripts\\python.exe", // ou ./.venv/bin/python Mac/Linux
+  "python.defaultInterpreterPath": "./.venv/bin/python", // ou ./.venv/bin/python Mac/Linux
   "python.analysis.autoImportCompletions": true,
   "python.terminal.activateEnvInCurrentTerminal": true,
   "python.terminal.activateEnvironment": true,
