@@ -18,37 +18,4 @@ Uma aplicação web completa para gerenciamento de contatos desenvolvida em Pyth
 
 ---
 
-## 📂 Estrutura de Diretórios do Projeto
-
-O projeto adota uma arquitetura global para arquivos estáticos e templates, facilitando o reaproveitamento de componentes visuais (`base.html`) e regras de estilo (`style.css`) por múltiplos aplicativos internos.
-
-```text
-Agenda/
-│
-├── base_static/              # Arquivos estáticos globais do projeto
-│   └── global/
-│       └── css/
-│           └── style.css     # Estilização global da aplicação (Design System base)
-│
-├── base_templates/           # Templates HTML globais do projeto
-│   └── global/
-│       └── base.html         # Template estrutural base (Layout principal)
-│
-├── contact/                  # Application principal de Contatos
-│   ├── migrations/           # Histórico de migrações do Banco de Dados
-│   ├── templates/
-│   │   └── contact/
-│   │       └── index.html    # View extendida para exibição e listagem de contatos
-│   ├── views/
-│   │   ├── __init__.py       # Exportações explícitas de views (Evitando Star Imports)
-│   │   └── contact_views.py  # Lógica de controle, consultas ORM e tratamento de contexto
-│   ├── models.py             # Modelo 'Contact' com mapeamento de dados
-│   └── apps.py
-│
-├── project/                  # Diretório de configurações core do Django (Settings)
-│   ├── __init__.py
-│   ├── settings.py           # Configurações do projeto (STATICFILES_DIRS, APPS)
-│   └── urls.py               # Roteamento global de URLs
-│
-├── manage.py                 # CLI utilitário do Django
-└── README.md                 # Documentação do projeto
+⚠️ **Nota:** Este projeto está em **desenvolvimento ativo**. 🏗️
