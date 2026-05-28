@@ -9,21 +9,22 @@ def index(request: HttpRequest):
 
     # print(contacts.query)
 
-    context = {
+    context = {  # type: ignore
         "contacts": contacts,
+        "site_title": "Contatos - ",
     }
 
-    return render(request, "contact/index.html", context)
+    return render(request, "contact/index.html", context)  # type: ignore
 
 
 def contact(request: HttpRequest, contact_id: int):
     # single_contact = Contact.objects.filter(pk=contact_id).first()
     single_contact = get_object_or_404(Contact, pk=contact_id, show=True)
 
+    site_title = f"{single_contact.first_name} {single_contact.last_name} - "
+
     # print(contacts.query)
 
-    context = {
-        "contact": single_contact,
-    }
+    context = {"contact": single_contact, "site_title": site_title}  # type: ignore
 
-    return render(request, "contact/contact.html", context)
+    return render(request, "contact/contact.html", context)  # type: ignore
