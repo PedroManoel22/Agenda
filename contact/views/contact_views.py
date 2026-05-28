@@ -5,7 +5,9 @@ from contact.models import Contact
 
 
 def index(request: HttpRequest):
-    contacts = Contact.objects.all()
+    contacts = Contact.objects.filter(show=True).order_by("-id")[0:2]
+
+    # print(contacts.query)
 
     context = {
         "contacts": contacts,
