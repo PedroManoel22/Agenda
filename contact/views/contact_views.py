@@ -53,6 +53,7 @@ def search(request: HttpRequest):
     context = {  # type: ignore
         "contacts": contacts,
         "site_title": "Contatos - ",
+        "search_value": search_value,
     }
 
     return render(request, "contact/index.html", context)  # type: ignore
