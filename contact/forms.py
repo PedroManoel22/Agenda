@@ -26,6 +26,9 @@ class ContactForm(forms.ModelForm):  # type: ignore
             "first_name",
             "last_name",
             "phone",
+            "email",
+            "description",
+            "category",
         )
 
         # widgets = {
