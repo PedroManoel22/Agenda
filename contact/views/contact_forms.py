@@ -1,5 +1,5 @@
 from django.http import HttpRequest
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 
 from contact.forms import ContactForm
 
@@ -7,7 +7,13 @@ from contact.forms import ContactForm
 def create(request: HttpRequest):
 
     if request.method == "POST":
-        context = {"form": ContactForm(request.POST)}
+        form = ContactForm(request.POST)
+
+        context = {"form": form}
+
+        if form.is_valid():
+            form.save()
+            return redirect("contact:create")
 
         return render(request, "contact/create.html", context)  # type: ignore
 
